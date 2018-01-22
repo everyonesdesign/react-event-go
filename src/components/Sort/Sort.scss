@@ -1,0 +1,37 @@
+@import 'styles/colors.scss';
+
+.sort-button{
+    display: flex;
+    width:150px;
+    justify-content:space-around;
+    align-items: center;
+    background: $grey;
+    font-size: 15px;
+    height: 30px;
+    padding: 0 10px; 
+    border-radius:3px;
+    cursor: pointer;
+    user-select: none;
+
+    &__text{
+        padding: 0 5px 0 0;
+        color: #fff;
+    }
+    &__caret{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 4px 8px 4px;
+        border-color: transparent transparent #fff transparent;
+
+        &_desc{
+            transform:rotate(180deg);
+        }
+    }
+
+    &_active{
+        background: $blue;
+    }
+
+    
+}

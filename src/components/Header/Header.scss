@@ -1,0 +1,54 @@
+@import 'styles/mixins.scss';
+
+.header{
+    display: flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+
+    @include mobile-450{
+        justify-content:space-between;
+    }
+
+    &__filters{
+        display: flex;
+        @include mobile{
+            order:1;
+        }
+    }
+    &__menu{
+        display: flex;
+        align-items:center;
+        height: 50px;
+    }
+
+    &__type{
+        width:150px;
+        margin: 0 15px 0 0;
+        @include mobile{
+            margin: 0 10px;
+        }
+        @include mobile-450{
+            width:120px;
+            margin: 0;
+        }
+    }
+    &__sort{
+        @include mobile{
+            margin: 0 10px;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        margin: 0 0 0 15px;
+        @include mobile{
+            margin: 0 10px;
+        }
+        @include mobile-450{
+            margin: 0 10px 0 0;
+        }
+    }
+    &__link.active{
+        text-decoration: underline;
+    }
+}

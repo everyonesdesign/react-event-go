@@ -1,0 +1,51 @@
+@import 'styles/colors.scss';
+@import 'styles/mixins.scss';
+
+body,
+html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: $darkBlue;
+    color: $gold;
+    font-size: 20px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+div{
+    box-sizing:border-box;
+}
+button:focus,
+a:focus{
+    outline: none !important;
+}
+button{
+    background: $blue;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+a{
+    color: $blue;
+}
+.main-container{
+    width:1200px;
+    max-width:100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include desktop{
+        width:991px;
+    }
+}
+
+.form-control{
+    border-radius: 3px;
+    border:1px solid $blue;
+    padding: 0 10px;
+    height: 30px;
+}
+
+
+
